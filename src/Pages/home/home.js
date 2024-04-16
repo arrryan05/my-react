@@ -1,7 +1,10 @@
+import Blogs from "../../Components/Blogs.jsx";
 import Carousel from "../../Components/Carousel.jsx";
 import Challenges from "../../Components/Challenges.jsx";
+import ContactForm from "../../Components/ContactForm.jsx";
 import CustomButton from "../../Components/CustomButton.jsx";
 import Difference from "../../Components/Difference.jsx";
+import Footer from "../../Components/Footer.jsx";
 import Header from "../../Components/Header.jsx";
 import Hero from "../../Components/Hero.jsx";
 import { Text1, Text2, Text3, Text4 } from "../../Components/Texts.jsx";
@@ -24,6 +27,15 @@ const Home = () => {
         <CustomButton buttonText="Explore Our AI Practice" />
       </div>
       <Text4 />
+      <Blogs />
+      <div className="w-full flex justify-center py-2">
+        <CustomButton buttonText="View All Resources" />
+      </div>
+      <ContactForm />
+      <Footer />
+      <div className="container-fluid flex justify-center text-sm p-2">
+        Acacia Advisors © 2024 All rights reserved
+      </div>
     </div>
   );
 };
