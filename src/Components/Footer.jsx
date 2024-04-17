@@ -11,7 +11,7 @@ const Footer = () => {
             className="w-40"
           />
           <div class="grid col-span-2 justify-between grid-cols-1 md:grid-cols-4 gap-4">
-            <ul className="w-44">
+            <ul className="">
               <p class="block mb-3 font-sans text-lg antialiased font-semibold leading-normal text-black">
                 Services
               </p>
