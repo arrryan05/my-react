@@ -21,13 +21,13 @@ const Header2 = () => {
       }`}
     >
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3">
+        <button className="flex items-center space-x-3">
           <img
             className="h-8"
             src={`${isAtTop ? "./logoTop.png" : "./logo.png"}`}
             alt="Acacia Advisors"
           />
-        </a>
+        </button>
 
         <div className="flex">
           <div
