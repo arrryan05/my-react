@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer class="w-full">
-      <div class="w-full mx-auto p-12">
+      <div class="w-full mx-auto py-12 px-6">
         <div class="grid justify-evenly grid-cols-1 gap-4 md:grid-cols-3">
           <img
             src="https://chooseacacia.com/wp-content/uploads/2024/01/logo_final_acacia-logo-hor.png"

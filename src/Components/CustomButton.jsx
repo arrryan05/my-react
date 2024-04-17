@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomButton = ({ buttonText = "" }) => {
   return (
-    <button className="relative inline-flex items-center justify-center py-1 pl-8 pr-2 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded-2xl hover:pl-2 hover:pr-8 bg-yellow-500 hover:bg-white border border-yellow-500 group">
+    <button className="relative w-fit inline-flex items-center justify-center py-1 pl-8 pr-2 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded-2xl hover:pl-2 hover:pr-8 bg-yellow-500 hover:bg-white border border-yellow-500 group">
       <span className="absolute left-1">
         <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
           <circle
