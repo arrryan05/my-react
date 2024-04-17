@@ -1,4 +1,5 @@
 import React from "react";
+import CircularAnimation from "./CircularAnimation";
 
 const Challenges = () => {
   return (
@@ -16,9 +17,7 @@ const Challenges = () => {
           you turn strategy into reality.
         </p>
       </div>
-      <div className="w-full md:w-1/2 object-cover flex justify-center items-center">
-        <img src="./Capture.JPG" alt="Challenges" />
-      </div>
+      <CircularAnimation />
     </div>
   );
 };

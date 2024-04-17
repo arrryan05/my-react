@@ -1,136 +1,113 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const genericHamburgerLine = `h-1 w-8 my-[3px] rounded-full transition ease transform duration-300`;
+
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        setIsAtTop(false);
+      } else {
+        setIsAtTop(true);
+      }
+    });
+  }, [isAtTop]);
+
   return (
-    <nav class="bg-white w-full fixed top-0 z-50 py-4 border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <div
+      className={`w-full fixed top-0 z-50 py-4 lg:hidden ${
+        isOpen ? "bg-cyan-500" : isAtTop ? "bg-transparent" : "bg-white"
+      }`}
+    >
+      <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" className="flex items-center space-x-3">
           <img
-            class="h-8"
-            src="https://chooseacacia.com/wp-content/uploads/2024/01/logo_final_acacia-logo-hor.png"
+            className="h-8"
+            src={`${isAtTop ? "./logoTop.png" : "./logo.png"}`}
             alt="Acacia Advisors"
           />
         </a>
+
         <button
-          data-collapse-toggle="navbar-dropdown"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-dropdown"
-          aria-expanded="false"
+          className="flex flex-col h-10 w-16 justify-center items-center group"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          <div
+            className={`${genericHamburgerLine}  ${
+              isAtTop ? "bg-white" : "bg-cyan-500"
+            } ${isOpen ? "rotate-45 translate-y-[0.6rem] bg-white" : ""} `}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              isAtTop ? "bg-white" : "bg-cyan-500"
+            } ${isOpen ? "opacity-0" : ""}  `}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              isAtTop ? "bg-white" : "bg-cyan-500"
+            } ${isOpen ? "-rotate-45 -translate-y-[0.6rem] bg-white" : ""}  `}
+          />
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-          <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+
+        {isOpen ? (
+          <div className="w-full flex flex-col pt-4 bg-cyan-500">
+            <div
+              className="w-full px-4 py-1 text-white flex hover:cursor-pointer hover:text-yellow-500"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              SERVICES
+              <svg
+                className={`ml-2 h-5 w-5 ${dropdownOpen ? "-rotate-180" : ""}`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                Services{" "}
-                <svg
-                  class="w-2.5 h-2.5 ms-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              <div
-                id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-              >
-                <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                  aria-labelledby="dropdownLargeButton"
-                >
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Earnings
-                    </a>
-                  </li>
-                </ul>
-                <div class="py-1">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Sign out
-                  </a>
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 14.293a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L10 11.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <>
+                <div className="w-full px-6 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+                  Strategy and Assesment
                 </div>
-              </div>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Resources
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
+                <div className="w-full px-6 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+                  Advisory Board and Coaching
+                </div>
+                <div className="w-full px-6 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+                  AI Strategy
+                </div>
+                <div className="w-full px-6 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+                  Sourcing Advisory
+                </div>
+                <div className="w-full px-6 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+                  Talent Solutions
+                </div>
+              </>
+            )}
+            <div className="w-full px-4 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+              RESOURCES
+            </div>
+            <div className="w-full px-4 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+              ABOUT US
+            </div>
+            <div className="w-full px-4 py-1 text-white hover:text-yellow-500 hover:cursor-pointer">
+              CONTACT US
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-    </nav>
+    </div>
   );
 };
 

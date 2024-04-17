@@ -6,6 +6,7 @@ import CustomButton from "../../Components/CustomButton.jsx";
 import Difference from "../../Components/Difference.jsx";
 import Footer from "../../Components/Footer.jsx";
 import Header from "../../Components/Header.jsx";
+import Header2 from "../../Components/Header2.jsx";
 import Hero from "../../Components/Hero.jsx";
 import { Text1, Text2, Text3, Text4 } from "../../Components/Texts.jsx";
 
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Header />
+      <Header2 />
       <Hero />
       <Challenges />
       <Text1 />

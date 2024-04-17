@@ -3,7 +3,7 @@ import React from "react";
 const Difference = () => {
   return (
     <div className="w-full flex flex-col md:flex-row gap-6 md:px-6 py-12">
-      <div className="w-full md:w-1/2 flex flex-col items-center">
+      <div className="w-full md:w-1/2 flex flex-col items-center transition-all duration-300 ease-in-out hover:-translate-y-10">
         <div className="w-full md:w-10/12 text-3xl text-white font-bold rounded-t-md bg-cyan-500 p-6">
           Acacia Advisors
         </div>
