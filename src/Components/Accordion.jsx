@@ -1,8 +1,12 @@
 import { useState } from "react";
 import CustomButton from "./CustomButton";
 
-const Carousel = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+const Accordion = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   const accordionData = [
     {
@@ -48,68 +52,46 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="container-fluid my-6 hidden md:flex h-[35rem]">
-      <div className="md:w-2/5 flex justify-center items-center bg-gradient-to-br from-cyan-900 to-cyan-500">
-        <ul className="w-full px-12">
-          {accordionData.map((item, index) => (
-            <li
-              key={index}
-              className={`py-2 px-4 cursor-pointer text-white ${
-                openIndex === index ? "text-white" : "text-gray-700"
-              }`}
-              onClick={() => setOpenIndex(index)}
-            >
-              <div
-                className={`flex items-center justify-start gap-4 ${
-                  openIndex === index ? "" : ""
-                }`}
-              >
-                <div
-                  className={`w-1 h-10 bg-yellow-500 ${
-                    openIndex === index ? "opacity-100" : " opacity-50"
-                  }`}
-                ></div>
-                <span
-                  className={`text-2xl text-white ${
-                    openIndex === index ? "font-bold" : ""
-                  }`}
-                >
-                  {item.title}
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="md:w-3/5 h-full">
-        {accordionData.map((item, index) => (
-          <div
-            key={index}
-            className={`h-full bg-cyan-800 ${
-              openIndex === index ? "block" : "hidden"
-            } transition-opacity duration-1000 ease-in-out `}
+    <div className="container-fluid my-4 md:hidden">
+      {accordionData.map((item, index) => (
+        <div key={index} className={`border border-gray-600 bg-cyan-800`}>
+          <button
+            className="w-full text-left py-2 px-8 focus:outline-none"
+            onClick={() => toggleAccordion(index)}
           >
-            <div className="w-full relative h-full">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 flex flex-col gap-2 justify-end p-20 bg-black bg-opacity-40">
-                <div className="text-white text-4xl font-semibold">
+            <div
+              className={`flex items-center justify-start gap-2 ${
+                openIndex === index ? "my-4" : ""
+              }`}
+            >
+              <div className="w-1 h-10 bg-yellow-500"></div>
+              <span className="text-lg text-white font-medium">
+                {item.title}
+              </span>
+            </div>
+          </button>
+          {openIndex === index && (
+            <div
+              className="relative h-96"
+              style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="w-full h-full absolute flex flex-col gap-2 justify-end p-6 bg-black bg-opacity-40">
+                <div className="text-white text-3xl font-semibold">
                   {item.content1}
                 </div>
-                <div className="text-white text-xl tracking-tight">
-                  {item.content2}
-                </div>
+                <div className="text-white tracking-tight">{item.content2}</div>
                 <CustomButton buttonText="Learn More" />
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          )}
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Carousel;
+export default Accordion;

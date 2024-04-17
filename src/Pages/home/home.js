@@ -1,3 +1,4 @@
+import Accordion from "../../Components/Accordion.jsx";
 import Blogs from "../../Components/Blogs.jsx";
 import Carousel from "../../Components/Carousel.jsx";
 import Challenges from "../../Components/Challenges.jsx";
@@ -23,6 +24,7 @@ const Home = () => {
         <CustomButton buttonText="Meet Acacia" />
       </div>
       <Text2 />
+      <Accordion />
       <Carousel />
       <Text3 />
       <div className="w-full flex justify-center pt-8">

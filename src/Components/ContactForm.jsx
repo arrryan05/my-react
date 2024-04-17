@@ -3,7 +3,7 @@ import CustomButton from "./CustomButton";
 
 const ContactForm = () => {
   return (
-    <div className="container-fluid mt-20 mx-auto bg-cyan-700 ">
+    <div className="container-fluid mt-20 mx-auto bg-gradient-to-tr from-sky-900 to-cyan-500 ">
       <div className="flex flex-wrap justify-center gap-10 p-6">
         <div className="w-full text-white md:w-5/12 flex flex-col justify-center">
           <p className="mb-4 text-center md:text-start text-4xl lg:text-6xl font-semibold tracking-wide ">
@@ -16,7 +16,7 @@ const ContactForm = () => {
           </p>
         </div>
         <div className="py-10 w-full md:w-5/12 ">
-          <form>
+          <form className="py-6">
             <div className="mb-4">
               <input
                 type="text"

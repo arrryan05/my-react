@@ -40,7 +40,7 @@ const Header2 = () => {
             SERVICES
             {isHovered && (
               <div
-                className="absolute w-64 -left-14 py-10"
+                className="absolute w-64 -left-14 py-6"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -57,7 +57,7 @@ const Header2 = () => {
                   <div className="w-full px-6 py-4 text-white hover:text-cyan-500 hover:bg-white rounded-md hover:cursor-pointer">
                     Sourcing Advisory
                   </div>
-                  <div className="w-full px-6 py-1 text-white hover:text-cyan-500 hover:bg-white rounded-md hover:cursor-pointer">
+                  <div className="w-full px-6 py-4 text-white hover:text-cyan-500 hover:bg-white rounded-md hover:cursor-pointer">
                     Talent Solutions
                   </div>
                 </div>
