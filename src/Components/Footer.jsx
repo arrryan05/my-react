@@ -5,11 +5,7 @@ const Footer = () => {
     <footer class="w-full">
       <div class="w-full mx-auto py-12 px-6">
         <div class="grid justify-evenly grid-cols-1 gap-4 md:grid-cols-3">
-          <img
-            src="https://chooseacacia.com/wp-content/uploads/2024/01/logo_final_acacia-logo-hor.png"
-            alt="logo"
-            className="w-28"
-          />
+          <div className="text-xl font-semibold">realAlzation</div>
           <div class="grid col-span-2 justify-between grid-cols-1 md:grid-cols-4 gap-4">
             <ul className="">
               <p class="block mb-3 font-sans text-xs antialiased font-semibold leading-normal text-black">
