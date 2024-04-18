@@ -8,11 +8,11 @@ const Footer = () => {
           <img
             src="https://chooseacacia.com/wp-content/uploads/2024/01/logo_final_acacia-logo-hor.png"
             alt="logo"
-            className="w-40"
+            className="w-28"
           />
           <div class="grid col-span-2 justify-between grid-cols-1 md:grid-cols-4 gap-4">
             <ul className="">
-              <p class="block mb-3 font-sans text-lg antialiased font-semibold leading-normal text-black">
+              <p class="block mb-3 font-sans text-xs antialiased font-semibold leading-normal text-black">
                 Services
               </p>
               <li>
@@ -42,7 +42,7 @@ const Footer = () => {
               </li>
             </ul>
             <ul>
-              <p class="block mb-3 font-sans text-lg antialiased font-semibold leading-normal text-black">
+              <p class="block mb-3 font-sans text-xs antialiased font-semibold leading-normal text-black">
                 Resources
               </p>
               <li>
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
             </ul>
             <ul>
-              <p class="block mb-3 font-sans text-lg antialiased font-semibold leading-normal text-black">
+              <p class="block mb-3 font-sans text-xs antialiased font-semibold leading-normal text-black">
                 About Us
               </p>
               <li>
@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
               <li>
                 <button class="block py-1.5 font-sans text-xs font-normal leading-relaxed text-gray-700 antialiased transition-colors hover:text-black">
-                  Acacia Values
+                  realAlzation Values
                 </button>
               </li>
               <li>
@@ -72,12 +72,12 @@ const Footer = () => {
               </li>
               <li>
                 <button class="block py-1.5 font-sans text-xs font-normal leading-relaxed text-gray-700 antialiased transition-colors hover:text-black">
-                  Acacia Leadership
+                  realAlzation Leadership
                 </button>
               </li>
             </ul>
             <ul>
-              <p class="block mb-3 font-sans text-lg antialiased font-semibold leading-normal text-black">
+              <p class="block mb-3 font-sans text-xs antialiased font-semibold leading-normal text-black">
                 Contact Us
               </p>
               <li>

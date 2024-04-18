@@ -19,17 +19,17 @@ const Header = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 z-50 py-4 lg:hidden ${
-        isOpen ? "bg-cyan-500" : isAtTop ? "bg-transparent" : "bg-white"
-      }`}
+      className={`w-full fixed top-0 z-50 lg:hidden ${
+        isAtTop ? "py-4" : "shadow-lg"
+      } ${isOpen ? "bg-cyan-500" : isAtTop ? "bg-transparent" : "bg-white"}`}
     >
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <button className="flex items-center space-x-3">
-          <img
-            className="h-8"
-            src={`${isAtTop ? "./logoTop.png" : "./logo.png"}`}
-            alt="Acacia Advisors"
-          />
+        <button
+          className={`flex items-center space-x-3 text-xl font-semibold ${
+            isAtTop ? "text-white" : "text-black"
+          } `}
+        >
+          realAlzation
         </button>
 
         <button

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ContactAnimation } from "../Pages/home/home";
 
 const Header2 = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const { toAnimate, updateVariable } = useContext(ContactAnimation);
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
@@ -16,28 +18,28 @@ const Header2 = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 z-50 py-4 hidden lg:flex ${
-        isAtTop ? "bg-transparent" : "bg-white"
+      className={`w-full fixed top-0 z-50  px-6 hidden lg:flex ${
+        isAtTop ? "bg-transparent py-4" : "bg-white shadow-lg"
       }`}
     >
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <button className="flex items-center space-x-3">
-          <img
-            className="h-8"
-            src={`${isAtTop ? "./logoTop.png" : "./logo.png"}`}
-            alt="Acacia Advisors"
-          />
+        <button
+          className={`flex items-center space-x-3 text-xl font-semibold ${
+            isAtTop ? "text-white" : "text-black"
+          } `}
+        >
+          realAlzation
         </button>
 
         <div className="flex">
           <div
-            className={`text-sm font-semibold px-4 py-1 ${
+            className={`text-xs font-semibold px-4 py-1 ${
               isAtTop ? "text-white" : "text-black"
             } hover:text-yellow-500 hover:cursor-pointer relative`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            SERVICES
+            Services
             {isHovered && (
               <div
                 className="absolute w-64 -left-14 py-6"
@@ -64,27 +66,32 @@ const Header2 = () => {
               </div>
             )}
           </div>
-
           <div
-            className={`text-sm font-semibold px-4 py-1 ${
+            className={`text-xs font-semibold px-4 py-1 ${
               isAtTop ? "text-white" : "text-black"
             } hover:text-yellow-500 hover:cursor-pointer`}
           >
-            RESOURCES
+            Resources
           </div>
           <div
-            className={`text-sm font-semibold  px-4 py-1 ${
+            className={`text-xs font-semibold  px-4 py-1 ${
               isAtTop ? "text-white" : "text-black"
             } hover:text-yellow-500 hover:cursor-pointer`}
           >
-            ABOUT US
+            About Us
           </div>
           <div
-            className={`text-sm font-semibold px-4 py-1 ${
+            className={`text-xs font-semibold px-4 py-1 ${
               isAtTop ? "text-white" : "text-black"
-            } hover:text-yellow-500 hover:cursor-pointer`}
+            } ${
+              isAtTop && toAnimate
+                ? "hover:text-neutral-700"
+                : "hover:text-yellow-500"
+            } hover:cursor-pointer`}
+            onMouseEnter={() => updateVariable(true)}
+            onMouseLeave={() => updateVariable(false)}
           >
-            CONTACT US
+            Contact Us
           </div>
         </div>
       </div>

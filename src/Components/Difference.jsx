@@ -2,14 +2,14 @@ import React from "react";
 
 const Difference = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row gap-6 md:px-6 py-12">
-      <div className="w-full md:w-1/2 flex flex-col items-center transition-all duration-300 ease-in-out hover:-translate-y-10">
-        <div className="w-full md:w-10/12 text-3xl text-white font-bold rounded-t-md bg-gradient-to-br from-cyan-400 to-cyan-700 p-6">
-          Acacia Advisors
+    <div className="w-full lg:w-5/6 flex flex-col md:flex-row gap-6 md:px-6 py-12">
+      <div className="w-full lg:w-1/2 flex flex-col items-center transition-all duration-300 ease-in-out hover:-translate-y-10">
+        <div className="w-full md:w-4/5 text-2xl font-semibold text-white rounded-t-md bg-gradient-to-br from-cyan-400 to-cyan-700 p-4">
+          realAlzation Advisors
         </div>
         <div className="w-full flex flex-col gap-4 px-6 py-10 shadow-xl">
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -54,12 +54,12 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Technology-focused
             </div>
           </div>
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -104,12 +104,12 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Partner-level practitioners
             </div>
           </div>
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -154,12 +154,12 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Tailored strategies built on best practices
             </div>
           </div>
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -204,12 +204,12 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Strategy AND execution
             </div>
           </div>
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -254,12 +254,12 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Technology & vendor agnostic
             </div>
           </div>
-          <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-8 h-8">
+          <div className="flex justify-start gap-6">
+            <div className="flex justify-center items-center bg-gradient-to-br from-cyan-400 to-cyan-700 rounded-full w-6 h-6 shadow-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14.783"
@@ -304,19 +304,19 @@ const Difference = () => {
                 </g>
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 flex items-center ">
               Simple pricing model
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col items-center">
-        <div className="w-full md:w-10/12 text-3xl text-white font-bold rounded-t-md bg-zinc-400 p-6">
+      <div className="w-full lg:w-1/2 flex flex-col items-center">
+        <div className="w-full md:w-4/5 text-2xl font-semibold text-white rounded-t-md bg-zinc-400 p-4">
           Big Consulting Firms
         </div>
         <div className="w-full flex flex-col gap-4 px-6 py-10 rounded-md bg-zinc-100">
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -332,12 +332,12 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Technology is a part of a broad set of services
             </div>
           </div>
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -353,12 +353,12 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Pyramid of junior resources
             </div>
           </div>
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -374,12 +374,12 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Templated “audit approach”
             </div>
           </div>
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -395,12 +395,12 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Victory is declared at PowerPoint guidance
             </div>
           </div>
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -416,12 +416,12 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Incentivized technology partners
             </div>
           </div>
           <div className="flex justify-start gap-8">
-            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-8 h-8">
+            <div className="flex justify-center items-center bg-gradient-to-br from-pink-500 to-pink-800 rounded-full w-6 h-6 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="11.019"
@@ -437,7 +437,7 @@ const Difference = () => {
                 />
               </svg>
             </div>
-            <div className="text-gray-600 text-xl flex items-center ">
+            <div className="text-neutral-800 text-sm flex items-center ">
               Blended hourly pricing
             </div>
           </div>

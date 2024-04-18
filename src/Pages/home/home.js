@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import Accordion from "../../Components/Accordion.jsx";
 import Blogs from "../../Components/Blogs.jsx";
 import Carousel from "../../Components/Carousel.jsx";
@@ -11,17 +12,37 @@ import Header2 from "../../Components/Header2.jsx";
 import Hero from "../../Components/Hero.jsx";
 import { Text1, Text2, Text3, Text4 } from "../../Components/Texts.jsx";
 
+const ContactAnimation = createContext();
+
+const AnimationProvider = ({ children }) => {
+  const [toAnimate, setToAnimate] = useState(false);
+
+  const updateVariable = (newValue) => {
+    setToAnimate(newValue);
+  };
+
+  return (
+    <ContactAnimation.Provider value={{ toAnimate, updateVariable }}>
+      {children}
+    </ContactAnimation.Provider>
+  );
+};
+
 const Home = () => {
   return (
     <div className="relative">
-      <Header />
-      <Header2 />
-      <Hero />
+      <AnimationProvider>
+        <Header />
+        <Header2 />
+        <Hero />
+      </AnimationProvider>
       <Challenges />
       <Text1 />
-      <Difference />
+      <div className="w-full flex justify-center">
+        <Difference />
+      </div>
       <div className="w-full flex justify-center py-8">
-        <CustomButton buttonText="Meet Acacia" />
+        <CustomButton buttonText="Meet realAlzation" />
       </div>
       <Text2 />
       <Accordion />
@@ -37,10 +58,12 @@ const Home = () => {
       </div>
       <ContactForm />
       <Footer />
-      <div className="container-fluid flex justify-center text-sm p-2">
-        Acacia Advisors © 2024 All rights reserved
+      <div className="container-fluid flex justify-center text-xs p-2">
+        realAlzation Advisors © 2024 All rights reserved
       </div>
     </div>
   );
 };
+
 export default Home;
+export { ContactAnimation };

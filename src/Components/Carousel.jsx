@@ -25,7 +25,7 @@ const Carousel = () => {
       title: "Artificial Intelligence Enablement",
       content1: "Artificial Intelligence Enablement",
       content2:
-        "Acacia helps you harness AI as a powerhouse for strategic transformation. AI is no longer a shiny object, but a visionary’s ally for the future, optimize operations, elevate products/services, and uncover new revenue streams.",
+        "realAlzation helps you harness AI as a powerhouse for strategic transformation. AI is no longer a shiny object, but a visionary’s ally for the future, optimize operations, elevate products/services, and uncover new revenue streams.",
       image:
         "https://chooseacacia.com/wp-content/uploads/2024/01/tab-bg-ai-enablement.jpg",
     },
@@ -102,7 +102,9 @@ const Carousel = () => {
                 <div className="text-white text-xl tracking-tight">
                   {item.content2}
                 </div>
-                <CustomButton buttonText="Learn More" />
+                <div className="w-28">
+                  <CustomButton buttonText="Learn More" />
+                </div>
               </div>
             </div>
           </div>
